@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+# no extension makes life better
+#                    sometimes..
+
+use strict;
+# use warnings;
+
+
+use FindBin;
+BEGIN { unshift @INC, "$FindBin::Bin/../lib" }
+
+# command for starting interface
+require Mojolicious::Commands;
+Mojolicious::Commands->start_app('HelloWorld');
